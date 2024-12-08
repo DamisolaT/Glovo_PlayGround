@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:glovo_assign1/lIst_view_page.dart';
+import 'package:glovo_assign1/features/pages/lIst_view_page.dart';
 
 class GridViewPage extends StatelessWidget {
   const GridViewPage({super.key});
