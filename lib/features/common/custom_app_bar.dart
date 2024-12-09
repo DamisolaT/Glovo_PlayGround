@@ -11,23 +11,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: AppColors.appBG,
-      title: const Padding(
-        padding: EdgeInsets.only(left: 45),
-        child: Text(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 45),
+      child: AppBar(
+        backgroundColor: AppColors.appBG,
+        automaticallyImplyLeading: false,
+        title: const Text(
           "CodeChamp.in",
           style: TextStyle(
             fontFamily: "Jockey",
-            fontSize: 32,
+            fontSize: 30,
             color: AppColors.white,
           ),
         ),
-      ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.only(right: 34),
-          child: IconButton(
+        centerTitle: false,
+        actions: [
+          IconButton(
             icon: SvgPicture.asset(
               AppAssets.menuIcon,
               height: 40,
@@ -37,8 +36,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               // Add the desired action here
             },
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

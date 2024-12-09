@@ -15,109 +15,115 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.appBG,
-      appBar: CustomAppBar(),
-      body: SingleChildScrollView(
-        child: SafeArea(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 57,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 55, right: 54),
-              child: Image.asset(
+      appBar: const CustomAppBar(),
+      body: SafeArea(
+          child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 45),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 57,
+              ),
+              Image.asset(
                 AppAssets.reshotIcon,
                 height: 249,
                 width: 321,
               ),
-            ),
-            const SizedBox(
-              height: 46,
-            ),
-            const Text(
-              "Hello , Welcome !",
-              style: TextStyle(
-                  fontFamily: "Jockey", fontSize: 36, color: AppColors.white),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            const Center(
-              child: Text(
-                "Welcome to codeChamp.in Top platform",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: "Inter",
-                  fontSize: 16,
-                  color: AppColors.white,
+              const SizedBox(
+                height: 46,
+              ),
+              const Center(
+                child: Text(
+                  "Hello, Welcome !",
+                  style: TextStyle(
+                      fontFamily: "Jockey",
+                      fontSize: 36,
+                      color: AppColors.white),
                 ),
               ),
-            ),
-            const Center(
-              child: Text(
-                "to coders",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: "Inter",
-                  fontSize: 16,
-                  color: AppColors.white,
+              const SizedBox(
+                height: 24,
+              ),
+              const Center(
+                child: Text(
+                  "Welcome to codeChamp.in Top platform",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: "Inter",
+                    fontSize: 13,
+                    color: AppColors.white,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 46,
-            ),
-            AppButtons(
-              buttonText: "Login",
-              onPressed: () {
-                Navigator.pushNamed(context, AppRouteStrings.loginScreen);
-              },
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            AppButtons(
-              buttonText: "Sign Up",
-              onPressed: () {
-                Navigator.pushNamed(context, AppRouteStrings.signUpScreen);
-              },
-            ),
-            const SizedBox(
-              height: 46,
-            ),
-            Text(
-              "Or  via social media",
-              textAlign: TextAlign.center,
-              style: textStyle.copyWith(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  color: AppColors.white),
-            ),
-            const SizedBox(
-              height: 14,
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(AppAssets.facebookIcon),
-                const SizedBox(
-                  width: 13,
+              const Center(
+                child: Text(
+                  "to coders",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: "Inter",
+                    fontSize: 13,
+                    color: AppColors.white,
+                  ),
                 ),
-                SvgPicture.asset(AppAssets.googleIcon),
-                const SizedBox(
-                  width: 13,
+              ),
+              const SizedBox(
+                height: 46,
+              ),
+              AppButtons(
+                buttonText: "Login",
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRouteStrings.loginScreen);
+                },
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              AppButtons(
+                buttonText: "Sign Up",
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRouteStrings.signUpScreen);
+                },
+              ),
+              const SizedBox(
+                height: 46,
+              ),
+              Center(
+                child: Text(
+                  "Or  via social media",
+                  textAlign: TextAlign.center,
+                  style: textStyle.copyWith(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                      color: AppColors.white),
                 ),
-                SvgPicture.asset(AppAssets.lnIcon),
-              ],
-            ),
-            const SizedBox(
-              height: 103,
-            )
-          ],
-        )),
-      ),
+              ),
+              const SizedBox(
+                height: 14,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(AppAssets.facebookIcon),
+                  const SizedBox(
+                    width: 13,
+                  ),
+                  SvgPicture.asset(AppAssets.googleIcon),
+                  const SizedBox(
+                    width: 13,
+                  ),
+                  SvgPicture.asset(AppAssets.lnIcon),
+                ],
+              ),
+              const SizedBox(
+                height: 103,
+              )
+            ],
+          ),
+        ),
+      )),
     );
   }
 }
