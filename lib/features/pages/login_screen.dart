@@ -64,7 +64,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontFamily: "Inter",
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
-                    color: Colors.white),
+                    color: Colors.white
+                ),
               ),
               const SizedBox(
                 height: 12,

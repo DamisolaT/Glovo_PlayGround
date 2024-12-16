@@ -3,6 +3,7 @@ import 'package:glovo_assign1/features/common/app_button.dart';
 import 'package:glovo_assign1/features/common/custom_app_bar.dart';
 
 import '../common/textformfield.dart';
+import '../navigation/route_strings.dart';
 import '../shared/app_colors.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -130,7 +131,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   buttonText: "Sign Up",
                   onPressed: () {
                     if (_formKey.currentState?.validate() ?? false) {}
-                    // Navigator.pushNamed(context, AppRouteStrings.signUpScreen);
+                    Navigator.pushNamed(
+                        context, AppRouteStrings.lightModeScreen);
                   },
                 ),
                 const SizedBox(
