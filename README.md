@@ -14,3 +14,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+![image alt]([image_url](https://github.com/DamisolaT/Glovo_PlayGround/blob/bb7e7cf4ef93f59651876bde34e02b3ff86c9712/BMI.PNG))
