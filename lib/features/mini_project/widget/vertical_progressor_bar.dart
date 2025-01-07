@@ -1,37 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:glovo_assign1/features/shared/app_colors.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
-class VerticalProgressBar extends StatelessWidget {
-  final double progress;
+class VerticalSlider extends StatelessWidget {
+  const VerticalSlider({
+    super.key,
+    required this.value,
+    required this.onChanged,
+  });
 
-  const VerticalProgressBar({super.key, required this.progress});
+  final double value;
+  final ValueChanged<double> onChanged;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            Container(
-              height: 374,
-              width: 19,
-              decoration: BoxDecoration(
-                color: AppColors.bmiColor,
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-            Container(
-              height: 374 * progress,
-              width: 19,
-              decoration: BoxDecoration(
-                  color: AppColors.bmiBlueColor,
-                  borderRadius: BorderRadius.circular(10)),
-            ),
-          ],
-        ),
-      ],
+    return SfSlider.vertical(
+      min: 0,
+      max: 100,
+      value: value,
+      interval: 20,
+      showTicks: false,
+      showLabels: false,
+      activeColor: AppColors.bmiBlueColor,
+      inactiveColor: AppColors.heightColor,
+      onChanged: (dynamic newValue) {
+        onChanged(newValue as double);
+      },
     );
   }
 }
