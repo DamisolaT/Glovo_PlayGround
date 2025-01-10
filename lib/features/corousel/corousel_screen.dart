@@ -83,7 +83,7 @@ class _CarouselScreenState extends State<CarouselScreen> {
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, AppRouteStrings.pageViewScreen);
+                Navigator.pushNamed(context, AppRouteStrings.tabBarViewScreen);
               },
               child: Text("Next"))
         ],

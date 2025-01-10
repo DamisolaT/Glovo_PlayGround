@@ -7,4 +7,5 @@ class AppRouteStrings {
   static const String resultScreen = "/result_screen";
   static const String carouselScreen = "/carousel_screen";
   static const String pageViewScreen = "/page_view_screen";
+  static const String tabBarViewScreen = "/tab_bar_view_screen";
 }

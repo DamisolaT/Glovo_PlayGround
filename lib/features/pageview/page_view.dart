@@ -19,7 +19,7 @@ class _PageViewScreenState extends State<PageViewScreen> {
         physics: const AlwaysScrollableScrollPhysics(),
         controller: _pageController,
         itemBuilder: (_, index) {
-          return Container();
+          return Placeholder();
         },
         itemCount: 2,
       ),
