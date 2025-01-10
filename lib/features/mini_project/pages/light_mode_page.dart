@@ -228,7 +228,7 @@ class _LightModePageState extends State<LightModePage> {
                   setState(() {
                     CalculateBMI();
                   });
-                  Navigator.pushNamed(context, AppRouteStrings.resultScreen);
+                  Navigator.pushNamed(context, AppRouteStrings.carouselScreen);
                 },
                 child: Container(
                   height: 50,
